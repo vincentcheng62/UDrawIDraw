@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">UDrawIDraw</string>
+    <string name="action_settings">Settings</string>
+    <string name="default_chatroom">Default Chatroom</string>
+    <string name="app_title">UDrawIDraw</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="send_btn">Send</string>
+    <string name="text_hint">message here</string>
+
+    <string name="USER_ID">1094635483</string>
+    <string name="USER_NAME">Alex Liu</string>
+
+
+    <string name="URL_GET_CHATROOMS">http://104.197.156.144/api/asgn4/get_chatrooms</string>
+    <string name="URL_GET_MESSAGES">http://104.197.156.144/api/asgn4/get_messages</string>
+    <string name="URL_SEND_MESSAGE">http://104.197.156.144/api/asgn4/send_message</string>
+    <string name="URL_SUBMIT_TOKEN">http://104.197.156.144/api/asgn4/submit_push_token</string>
+    <string name="URL_UPLOAD_IMAGE">http://104.197.156.144:5000/api/asgn4/upload_image</string>
+    <!--<string name="URL_GET_CHATROOMS">http://iems5722.albertauyeung.com/api/asgn2/get_chatrooms</string>-->
+    <!--<string name="URL_GET_MESSAGES">http://iems5722.albertauyeung.com/api/asgn2/get_messages</string>-->
+    <!--<string name="URL_SEND_MESSAGE">http://iems5722.albertauyeung.com/api/asgn2/send_message</string>-->
+
+    <string name="MSG_FIELD_STATUS">status</string>
+    <string name="MSG_FIELD_DATA">data</string>
+    <string name="MSG_FIELD_CHATROOM_ID">id</string>
+    <string name="MSG_FIELD_CHATROOM_NAME">name</string>
+    <string name="MSG_FIELD_MSGS_PAGE">current_page</string>
+    <string name="MSG_FIELD_MSGS_MSG_LIST">messages</string>
+    <string name="MSG_FIELD_MSGS_MSG_CONTENT">message</string>
+    <string name="MSG_FIELD_MSGS_USERNAME">name</string>
+    <string name="MSG_FIELD_MSGS_TIME">timestamp</string>
+    <string name="MSG_FIELD_MSGS_USERID">user_id</string>
+    <string name="MSG_FIELD_MSGS_TOTALPAGE">total_pages</string>
+    <string name="MSG_STATUS_OK">OK</string>
+    <string name="MSG_STATUS_ERROR">ERROR</string>
+
+    <string name="MENU_REFERSH">refresh</string>
+    <string name="MENU_ATTACH">attach</string>
+</resources>

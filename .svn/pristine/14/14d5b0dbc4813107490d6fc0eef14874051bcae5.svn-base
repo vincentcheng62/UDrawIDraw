@@ -1,0 +1,122 @@
+package com.iems5722.group5.AsyncTasks;
+
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
+import com.iems5722.group5.ChatViewAdapter;
+import com.iems5722.group5.MessageItem;
+import com.iems5722.group5.MsgViewInterface;
+import com.iems5722.group5.R;
+
+/**
+ * Created by AlexLiu on 14/2/17.
+ */
+
+public class GetMessagesAsyncTask extends AsyncTask<String, Void, String> {
+    private RelativeLayout layProgress;
+    private Activity acty;
+    private ChatViewAdapter msgAdapter;
+    private ArrayList<MessageItem> msgList;
+    private String myId;
+    private SimpleDateFormat msgDateFmt;
+    private Integer totalPages;
+    public MsgViewInterface intf = null;
+    ListView msgView = null;
+
+    public GetMessagesAsyncTask(Activity activity, ChatViewAdapter adapter, String userId,
+                                String userName) {
+        acty = activity;
+        msgAdapter = adapter;
+        myId = userId;
+        msgList = new ArrayList<MessageItem>();
+        layProgress = (RelativeLayout) acty.findViewById(R.id.layProgress);
+        msgView = (ListView) acty.findViewById(R.id.message_view);
+        msgDateFmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        totalPages = 0;
+    }
+
+    @Override
+    protected String doInBackground(String... params) {
+        try {
+            java.net.URL url = new java.net.URL(params[0]);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            InputStream is = new BufferedInputStream(conn.getInputStream());
+            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            StringBuilder sb = new StringBuilder();
+
+            String rx;
+            while((rx = br.readLine()) != null) {
+                sb.append(rx);
+            }
+
+            JSONObject topLevel = new JSONObject(sb.toString());
+            String sts = topLevel.getString(acty.getString(R.string.MSG_FIELD_STATUS));
+
+            if (acty.getString(R.string.MSG_STATUS_OK).equals(sts.toUpperCase())) {
+                totalPages = topLevel.getInt(acty.getString(R.string.MSG_FIELD_MSGS_TOTALPAGE));
+
+                JSONArray arMsgs = topLevel.getJSONArray(acty.getString(R.string.MSG_FIELD_DATA));
+                for(int i = 0; i < arMsgs.length(); i++) {
+                    JSONObject item = arMsgs.getJSONObject(i);
+                    String msgContent = item.getString(acty.getString(R.string.MSG_FIELD_MSGS_MSG_CONTENT));
+                    String name = item.getString(acty.getString(R.string.MSG_FIELD_MSGS_USERNAME));
+                    String userId = item.getString(acty.getString(R.string.MSG_FIELD_MSGS_USERID));
+                    String time = item.getString(acty.getString(R.string.MSG_FIELD_MSGS_TIME));
+                    String image = "";
+                    if (!item.isNull("image")) {
+                        image = item.getString("image");
+                    }
+                    MessageItem msg = new MessageItem(name, msgContent, image, msgDateFmt.parse(time), myId.equals(userId));
+                    msgList.add(msg);
+                }
+                return acty.getString(R.string.MSG_STATUS_OK);
+            }
+        }catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return acty.getString(R.string.MSG_STATUS_ERROR);
+    }
+
+    @Override
+    protected void onPreExecute() {
+        layProgress.setVisibility(View.VISIBLE);
+        super.onPreExecute();
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        if (acty.getString(R.string.MSG_STATUS_OK).equals(result))
+        {
+            if (intf != null) {
+                intf.storeTotalPage(totalPages);
+            }
+            for (MessageItem msg : msgList) {
+                msgAdapter.insert(msg, 0);
+            }
+            msgView.setSelection(msgAdapter.getCount() - 1);
+        }
+        else
+        {
+            Toast.makeText(acty.getApplicationContext(), "Error getting messages", Toast.LENGTH_SHORT).show();
+        }
+
+        layProgress.setVisibility(View.GONE);
+    }
+
+}

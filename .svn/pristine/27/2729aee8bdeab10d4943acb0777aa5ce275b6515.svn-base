@@ -1,0 +1,626 @@
+package com.iems5722.group5;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.PointF;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Shader;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.MotionEvent;
+import android.view.View;
+
+import com.iems5722.group5.DrawingObject.DrawingType;
+
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.Queue;
+/******************************************************
+ *  DrawingView is extracted from the project on
+ *  https://gitlab.com/ankit_aggarwal/DrawingFun/tree/master
+ *
+ * The comment "*****IEMS5722 Group5*****" will be added
+ * before a block of code  if it is added/modified by our group
+ *
+ *******************************************************/
+
+public class DrawingView extends View {
+
+    //drawing path
+    private Path mDrawPath;
+    //drawing and canvas paint
+    private Paint mDrawPaint, mCanvasPaint;
+    //initial color
+    private int mPaintColor = 0xFF660000;
+    //canvas
+    private Canvas mDrawCanvas;
+    //canvas bitmap
+    private Bitmap mCanvasBitmap;
+
+    private float mBrushSize, mLastBrushSize;
+    private boolean isFilling = false;  //for flood fill
+
+    //*****IEMS5722 Group5*****
+    private boolean isAddText = false;  //for adding text
+    private Paint mTextPaint;
+    public static ArrayList<DrawingObject> selfList = new ArrayList<DrawingObject>();
+    public static ArrayList<DrawingObject> wholeList = new ArrayList<DrawingObject>();
+    public static Bitmap bgBitmap;
+
+    final private int FD_move_emit_freq = 5;
+    private int FD_move_emit_count=0;
+
+    public DrawingView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        setupDrawing();
+    }
+
+    //get drawing area setup for interaction
+    private void setupDrawing() {
+
+        mBrushSize = getResources().getInteger(R.integer.medium_size);
+        mLastBrushSize = mBrushSize;
+
+        mDrawPath = new Path();
+
+        mDrawPaint = new Paint();
+        mDrawPaint.setColor(mPaintColor);
+        mDrawPaint.setAntiAlias(true);
+        mDrawPaint.setStrokeWidth(mBrushSize);
+        mDrawPaint.setStyle(Paint.Style.STROKE);
+        mDrawPaint.setStrokeJoin(Paint.Join.ROUND);
+        mDrawPaint.setStrokeCap(Paint.Cap.ROUND);
+
+        mCanvasPaint = new Paint(Paint.DITHER_FLAG);
+
+        mTextPaint = new Paint();
+        mTextPaint.setStyle(Paint.Style.FILL);
+        mTextPaint.setColor(mPaintColor);
+        mTextPaint.setTextSize(50);
+    }
+
+    //view given size
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+
+        super.onSizeChanged(w, h, oldw, oldh);
+
+        //mCanvasBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+
+        //*Bitmap bgBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.grey_bg);
+        //bgBitmap = Bitmap.createScaledBitmap(bgBitmap, 1059, 1179,true);
+        //*bgBitmap = Bitmap.createScaledBitmap(bgBitmap, w, h,true);
+        //*mCanvasBitmap = bgBitmap;
+        bgBitmap = Bitmap.createScaledBitmap(bgBitmap, w, h,true);
+        mCanvasBitmap = bgBitmap.copy(Bitmap.Config.ARGB_8888, true);
+        mDrawCanvas = new Canvas(mCanvasBitmap);
+    }
+
+    //draw view
+    @Override
+    protected void onDraw(Canvas canvas) {
+        //Log.d("onDraw", "");
+
+
+        canvas.drawBitmap(mCanvasBitmap, 0, 0, mCanvasPaint);
+
+        canvas.drawPath(mDrawPath, mDrawPaint);
+
+        //setWillNotDraw(false);
+
+        //Log.d("wholeList", "Size= " + wholeList.size());
+        if(wholeList.size()>0)
+        {
+            for (int i = 0; i < wholeList.size(); i++ ) {
+                //Log.d("wholeList", "i = " + i);
+                DrawingObject obj = wholeList.get(i);
+                if(obj.getType().equals(DrawingType.TXT)) {
+                    Paint mTextPaint = new Paint();
+                    mTextPaint.setStyle(Paint.Style.FILL); //TODO
+                    mTextPaint.setColor(obj.getColor());
+                    mTextPaint.setTextSize(obj.getTextSize());
+
+                    mDrawCanvas.drawText(obj.getText(), obj.getX(), obj.getY(), mTextPaint);
+                }
+                else if(obj.getType().equals(DrawingType.FREE))
+                {
+                    Paint drawpaint = new Paint();
+                    drawpaint.setStrokeWidth(obj.getLineWidth());
+                    drawpaint.setColor(obj.getColor());
+                    drawpaint.setAntiAlias(true);
+                    drawpaint.setStyle(Paint.Style.STROKE);
+                    drawpaint.setStrokeJoin(Paint.Join.ROUND);
+                    drawpaint.setStrokeCap(Paint.Cap.ROUND);
+                    //Log.d("Errorrrrr", "Path is drawing!!!");
+                    mDrawCanvas.drawPath(obj.getFreePath(), drawpaint);
+                    //if(obj.getFreePath().isEmpty()) Log.d("Errorrrrr", "Path is empty!!!");
+                }
+                else {
+                    //TODO emoji, circle, rect, free line
+                }
+            }
+        }
+
+    }
+
+    //detect user touch
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        float touchX = event.getX();
+        float touchY = event.getY();
+
+        if (isFilling) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_UP:
+                    FloodFill(new Point((int) touchX, (int) touchY));
+                    break;
+
+                default:
+                    return true;
+            }
+        }
+        //*****IEMS5722 Group5*****
+        else if (isAddText) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_UP:
+                    //AddTextToCanvas(touchX, touchY);
+                    Log.d("isAddText", "DrawingBoardActivity.inputText=" + DrawingBoardActivity.inputText);
+                    Log.d("ACTION_UP", "touchX="+ touchX + ", touchY=" +touchY);
+                    isAddText = false;
+                    mDrawCanvas.drawText(DrawingBoardActivity.inputText, touchX, touchY, mTextPaint);
+                    //mDrawCanvas.drawText();
+                    Log.d("mTextPaint", String.valueOf(mTextPaint.getColor()));
+                    emitTextData(DrawingBoardActivity.inputText, touchX, touchY, mTextPaint);
+
+                    //isAddText = false;
+                    break;
+
+                    default:
+                        return true;
+                }
+            invalidate();
+        } else {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    mDrawPath.moveTo(touchX, touchY);
+                    emit_FD_Start(touchX, touchY);
+                    Log.d("ACTION_DOWN", "touchX="+ touchX + ", touchY=" +touchY);
+                    break;
+
+                case MotionEvent.ACTION_MOVE:
+                    mDrawPath.lineTo(touchX, touchY);
+
+                    if(!mDrawPath.isEmpty())
+                    {
+                        //Only emit 1 over 5 times for speed-concern
+                        if(FD_move_emit_count>FD_move_emit_freq)
+                        {
+                            emit_FD_Move(touchX, touchY);
+                            FD_move_emit_count=0;
+                        }
+                        else FD_move_emit_count++;
+                        Log.d("ACTION_MOVE", "touchX="+ touchX + ", touchY=" +touchY);
+                    }
+
+                    break;
+
+                case MotionEvent.ACTION_UP:
+                    mDrawCanvas.drawPath(mDrawPath, mDrawPaint);
+                    emit_FD_Finish();
+                    Log.d("ACTION_UP", "touchX="+ touchX + ", touchY=" +touchY);
+
+
+                    DrawingObject obj=null;
+
+                    for (int i = wholeList.size()-1; i >=0; i-- ) {
+                        if(wholeList.get(i).getUserID().equals((String.valueOf(SignInActivity.guser_id))))
+                        {
+                            obj = wholeList.get(i);
+                            break;
+                        }
+                    }
+
+                    if(obj!=null) {
+                        obj.getFreePath().set(new Path(mDrawPath));
+                    }
+
+
+                    mDrawPath.reset();
+                    invalidate();
+                    break;
+
+                default:
+                    return false;
+            }
+        }
+
+
+        return true;
+    }
+
+    //set color
+    public void setColor(String newColor) {
+        invalidate();
+
+        mPaintColor = Color.parseColor(newColor);
+        mDrawPaint.setColor(mPaintColor);
+        mDrawPaint.setShader(null);
+
+        //
+        mTextPaint.setColor(mPaintColor);
+    }
+
+    //set pattern
+    public void setPattern(String newPattern) {
+        invalidate();
+
+        int patternID = getResources().getIdentifier(newPattern, "drawable", "com.iems5722.group5");
+
+        Bitmap patternBMP = BitmapFactory.decodeResource(getResources(), patternID);
+
+        BitmapShader patternBMPshader = new BitmapShader(patternBMP,
+                Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+
+        mDrawPaint.setColor(0xFFFFFFFF);
+        mDrawPaint.setShader(patternBMPshader);
+    }
+
+    //update size
+    public void setBrushSize(float newSize) {
+        mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                newSize, getResources().getDisplayMetrics());
+        mDrawPaint.setStrokeWidth(mBrushSize);
+    }
+
+    public void setLastBrushSize(float lastSize) {
+        mLastBrushSize = lastSize;
+    }
+
+    public float getLastBrushSize() {
+        return mLastBrushSize;
+    }
+
+    //set mErase true or false
+    public void setErase(boolean isErase) {
+        if (isErase) {
+            mDrawPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        } else {
+            mDrawPaint.setXfermode(null);
+        }
+    }
+
+    //clear canvas
+    public void startNew() {
+        mDrawCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
+
+        //*****IEMS5722 Group5*****
+        //*Bitmap bgBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.grey_bg);
+        //*bgBitmap = Bitmap.createScaledBitmap(bgBitmap, 1059, 1179,true);
+        //bgBitmap = Bitmap.createScaledBitmap(bgBitmap, w, h,true);
+        //**bgBitmap = Bitmap.createScaledBitmap(bgBitmap, 1059, 1179,true);
+        //*bgBitmap = Bitmap.createBitmap(bgBitmap);
+        mCanvasBitmap = bgBitmap;
+        //mDrawCanvas.drawBitmap(bgBitmap, 0, 0, null);
+        mDrawCanvas = new Canvas(mCanvasBitmap);
+        invalidate();
+    }
+
+    //fill effect
+    public void fillColor() {
+        isFilling = true;
+    }
+
+    //*****IEMS5722 Group5*****
+    //addText
+    public void addText() {
+        isAddText = true;
+    }
+
+    private synchronized void FloodFill(Point startPoint) {
+
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(startPoint);
+
+        int targetColor = mCanvasBitmap.getPixel(startPoint.x, startPoint.y);
+
+        while (queue.size() > 0) {
+            Point nextPoint = queue.poll();
+            if (mCanvasBitmap.getPixel(nextPoint.x, nextPoint.y) != targetColor)
+                continue;
+
+            Point point = new Point(nextPoint.x + 1, nextPoint.y);
+
+            while ((nextPoint.x > 0) && (mCanvasBitmap.getPixel(nextPoint.x, nextPoint.y) == targetColor)) {
+                mCanvasBitmap.setPixel(nextPoint.x, nextPoint.y, mPaintColor);
+                if ((nextPoint.y > 0) && (mCanvasBitmap.getPixel(nextPoint.x, nextPoint.y - 1) == targetColor))
+                    queue.add(new Point(nextPoint.x, nextPoint.y - 1));
+                if ((nextPoint.y < mCanvasBitmap.getHeight() - 1)
+                        && (mCanvasBitmap.getPixel(nextPoint.x, nextPoint.y + 1) == targetColor))
+                    queue.add(new Point(nextPoint.x, nextPoint.y + 1));
+                nextPoint.x--;
+            }
+
+            while ((point.x < mCanvasBitmap.getWidth() - 1)
+                    && (mCanvasBitmap.getPixel(point.x, point.y) == targetColor)) {
+                mCanvasBitmap.setPixel(point.x, point.y, mPaintColor);
+
+                if ((point.y > 0) && (mCanvasBitmap.getPixel(point.x, point.y - 1) == targetColor))
+                    queue.add(new Point(point.x, point.y - 1));
+                if ((point.y < mCanvasBitmap.getHeight() - 1)
+                        && (mCanvasBitmap.getPixel(point.x, point.y + 1) == targetColor))
+                    queue.add(new Point(point.x, point.y + 1));
+                point.x++;
+            }
+        }
+
+        isFilling = false;
+    }
+
+    //*****IEMS5722 Group5*****
+    public void emitTextData(String inputText, float touchX, float touchY, Paint mTextPaint) {
+
+        try {
+            DrawingObject textObj = new DrawingObject(DrawingType.TXT);
+            //textObj.setUserID("1199887766"); //TODO login user id
+            textObj.setUserID(String.valueOf(SignInActivity.guser_id));
+            textObj.setTimestamp(new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()));
+            textObj.setColor(mTextPaint.getColor());
+            textObj.setActive(true);
+
+            textObj.setText(DrawingBoardActivity.inputText);
+            textObj.setX(touchX);
+            textObj.setY(touchY);
+            textObj.setTextSize(50);
+
+            selfList.add(textObj);
+            wholeList.add(textObj);
+
+            JSONObject json = new JSONObject();
+            json.put("data_type", "add_drawing");
+            json.put("user_id", textObj.getUserID());
+            json.put("timestamp", textObj.getTimestamp());
+            json.put("type", "TXT");
+            json.put("color",  textObj.getColor());
+            json.put("text", textObj.getText());
+            json.put("x", textObj.getX());
+            json.put("y",  textObj.getY());
+            json.put("textsize", textObj.getTextSize());
+
+            DrawingBoardActivity.socket.emit("event_draw", json);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    //*****IEMS5722 Group5*****
+    public void addTextData (DrawingObject obj) {
+           // String text, float x, float y, int color) {
+
+//        Log.d("addTextData", "x="+obj.getX() +"; y="+ obj.getY());
+//        Paint textPaint = new Paint();
+//        textPaint.setStyle(Paint.Style.FILL);//TODO
+//        textPaint.setTextSize(obj.getTextSize());
+//        textPaint.setColor(obj.getColor());
+//        double dx = (double) obj.getX();
+//        double dy = (double) obj.getY();
+//        mDrawCanvas.drawText(obj.getText(), (float) dx, (float) dy, textPaint);
+//        Log.d("addTextData", "text=" + obj.getText());
+//        Log.d("addTextData", "dx=" + dx +"; dy="+ dy);
+
+        wholeList.add(obj); //TODO
+
+
+        invalidate();
+    }
+
+    public void addFreeLineFinish(String userId) {
+
+        //retrieve the latest Path object in wholelist with that userId
+        DrawingObject obj=null;
+
+        for (int i = wholeList.size()-1; i >=0; i-- ) {
+            if(wholeList.get(i).getUserID().equals((userId)))
+            {
+                obj = wholeList.get(i);
+                break;
+            }
+        }
+
+        if(obj!=null)
+        {
+            Paint drawpaint = new Paint();
+            drawpaint.setStrokeWidth(obj.getLineWidth());
+            drawpaint.setColor(obj.getColor());
+            drawpaint.setAntiAlias(true);
+            drawpaint.setStyle(Paint.Style.STROKE);
+            drawpaint.setStrokeJoin(Paint.Join.ROUND);
+            drawpaint.setStrokeCap(Paint.Cap.ROUND);
+            mDrawCanvas.drawPath(obj.getFreePath(), drawpaint);
+
+            Log.d("addFreeLineFinish", "Finish!");
+            invalidate();
+        }
+    }
+
+    public void addFreeLineMove(String userId, float x, float y) {
+
+        //retrieve the latest Path object in wholelist with that userId
+        DrawingObject obj=null;
+
+        for (int i = wholeList.size()-1; i >=0; i-- ) {
+            if(wholeList.get(i).getUserID().equals((userId)))
+            {
+                obj = wholeList.get(i);
+                break;
+            }
+        }
+
+        if(obj!=null)
+        {
+            obj.getFreeLine().add(new PointF(x, y));
+            obj.getFreePath().lineTo(x, y);
+            Log.d("addFreeLineMove", "X="+ x + "Y, =" +y);
+            invalidate();
+        }
+    }
+
+    public void addFreeLineStart(DrawingObject obj) {
+        wholeList.add(obj);
+        obj.getFreePath().moveTo(obj.getFreeLine().get(0).x, obj.getFreeLine().get(0).y);
+        Log.d("addFreeLineStart", "X="+ obj.getFreeLine().get(0).x + "Y, =" +obj.getFreeLine().get(0).y);
+
+        invalidate();
+    }
+
+    //*****IEMS5722 Group5*****
+
+    public void undoMyDrawingObject()
+    {
+        if (wholeList.size() >= 1 &&  selfList.size() >=1) {
+            DrawingObject objUndo = selfList.get(selfList.size() - 1); //get last object in selfList
+
+            if(objUndo!=null) {
+                undoDrawingObject(objUndo.getUserID(), objUndo.getTimestamp());
+                emitUndoData(objUndo.getTimestamp());
+            }
+        }
+    }
+
+    public void emit_FD_Start(float x, float y) {
+
+        try {
+            DrawingObject FDObj = new DrawingObject(DrawingType.FREE);
+            FDObj.setUserID(String.valueOf(SignInActivity.guser_id));
+            FDObj.setTimestamp(new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()));
+            FDObj.setColor(mDrawPaint.getColor());
+            FDObj.setActive(true);
+            FDObj.setFreePath(new Path(mDrawPath));
+            FDObj.setLineWidth((int)mDrawPaint.getStrokeWidth());
+
+            selfList.add(FDObj);
+            wholeList.add(FDObj);
+
+            JSONObject json = new JSONObject();
+            json.put("data_type", "add_drawing");
+            json.put("user_id", FDObj.getUserID());
+            json.put("timestamp", FDObj.getTimestamp());
+            json.put("type", "FREE");
+            json.put("color",  FDObj.getColor());
+
+            JSONObject coord_json_pair =new JSONObject();
+            coord_json_pair.put("x", x);
+            coord_json_pair.put("y", y);
+            json.put("free_points", coord_json_pair);
+            json.put("linewidth", String.valueOf(mDrawPaint.getStrokeWidth()));
+
+            DrawingBoardActivity.socket.emit("event_FD_Start", json);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void emit_FD_Move(float x, float y) {
+
+        try {
+            JSONObject json = new JSONObject();
+            json.put("user_id", String.valueOf(SignInActivity.guser_id));
+            json.put("x", x);
+            json.put("y", y);
+
+            DrawingBoardActivity.socket.emit("event_FD_Move", json);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void emit_FD_Finish() {
+
+        try {
+            JSONObject json = new JSONObject();
+            json.put("user_id", String.valueOf(SignInActivity.guser_id));
+
+            DrawingBoardActivity.socket.emit("event_FD_Finish", json);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void emitUndoData(String timestamp) {
+
+        try {
+            JSONObject json = new JSONObject();
+            json.put("user_id", SignInActivity.guser_id);
+            json.put("timestamp", timestamp);
+
+            DrawingBoardActivity.socket.emit("event_undo", json);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    public void undoDrawingObject(String userID, String TimeStamp){
+
+        Log.d("undoDrawingObject", "selfList.size()=" + selfList.size());
+        Log.d("undoDrawingObject", "wholeList.size()=" + wholeList.size());
+
+        for (int i = 0; i < wholeList.size(); i++ ) {
+            DrawingObject tempObj = wholeList.get(i);
+            if(tempObj.getUserID().equals(userID) && tempObj.getTimestamp().equals(TimeStamp)) {
+                wholeList.remove(i);
+
+                if(String.valueOf(SignInActivity.guser_id).equals(userID))
+                    selfList.remove(selfList.size()-1);
+
+                Log.d("undoDrawingObject", "obj remove = " + i);
+            }
+        }
+        Log.d("undoDrawingObject", "wholeList.size() after=" + wholeList.size());
+
+        this.startNew(); //clear canvas
+//
+//        for (int i = 0; i < wholeList.size(); i++ ) {
+//            Log.d("wholeList", "i = " + i);
+//            DrawingObject obj = wholeList.get(i);
+//            if (obj.getType().equals(DrawingType.TXT)) {
+//                Paint mTextPaint = new Paint();
+//                mTextPaint.setStyle(Paint.Style.FILL); //TODO
+//                mTextPaint.setColor(obj.getColor());
+//                mTextPaint.setTextSize(obj.getTextSize());
+//
+//                mDrawCanvas.drawText(obj.getText(), obj.getX(), obj.getY(), mTextPaint);
+//
+//            } else {
+//                //TODO emoji, circle, rect, free line
+//            }
+//        }
+
+        invalidate();
+
+    }
+
+
+}

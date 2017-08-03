@@ -1,0 +1,107 @@
+package com.iems5722.group5;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+
+import java.util.ArrayList;
+
+import com.iems5722.group5.AsyncTasks.GetChatroomAsyncTask;
+import com.iems5722.group5.R;
+
+public class MainActivity extends AppCompatActivity {
+    public final static String CHATROOM_NAME = "com.iems5722.group5.CHATROOM_NAME";
+    public final static String CHATROOM_ID = "com.iems5722.group5.CHATROOM_ID";
+
+    private ChatRoomListAdapter roomAdapter;
+    private ListView chatroomView;
+    private ArrayList<ChatroomItem> roomList;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if (!isGooglePlayServiceAvaialble()) {
+            Toast.makeText(this, "Google Play Service not available", Toast.LENGTH_SHORT);
+            return;
+        }
+        // init chatroom listview
+        roomList = new ArrayList<ChatroomItem>();
+        roomAdapter = new ChatRoomListAdapter(this, roomList);
+        chatroomView = (ListView)findViewById(R.id.lvChatroomList);
+        chatroomView.setAdapter(roomAdapter);
+        chatroomView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1,int position, long arg3)
+            {
+                Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                intent.putExtra(CHATROOM_NAME, roomAdapter.getItem(position).getName());
+                intent.putExtra(CHATROOM_ID, roomAdapter.getItem(position).getId());
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        if (!isGooglePlayServiceAvaialble()) {
+            Toast.makeText(this, "Google Play Service not available", Toast.LENGTH_SHORT);
+        }
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart(){
+        new GetChatroomAsyncTask(this, roomAdapter).execute(getString(R.string.URL_GET_CHATROOMS));
+        super.onStart();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private boolean isGooglePlayServiceAvaialble() {
+        GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();
+        int status = googleApiAvailability.isGooglePlayServicesAvailable(this);
+        if(status != ConnectionResult.SUCCESS) {
+            if(googleApiAvailability.isUserResolvableError(status)) {
+                googleApiAvailability.getErrorDialog(this, status, 2404).show();
+            }
+            return false;
+        }
+        return true;
+    }
+
+}

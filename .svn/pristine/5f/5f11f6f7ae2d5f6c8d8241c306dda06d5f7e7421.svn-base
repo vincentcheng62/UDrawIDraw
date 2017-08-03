@@ -1,0 +1,172 @@
+package com.iems5722.group5;
+
+
+import android.graphics.Point;
+import android.graphics.Rect;
+
+import java.util.List;
+
+public class DrawingObject {
+
+    public enum DrawingType {
+        TXT,
+        EMOJI,
+        CIRCLE,
+        RECT,
+        FREE
+    }
+
+    private DrawingType type;
+    private String userID;
+    private String timestamp; // yyyyMMddHHmmsszzz
+    private Integer color;
+    private Boolean isActive;
+
+    private int textSize; //for TXT
+    private String text; // for TXT
+    private float x;// for TXT
+    private float y;// for TXT
+
+    private Integer emojiId; // for EMOJI
+
+    private Point circleCenter; // for CIRCLE
+    private Integer radius; // for CIRCLE
+
+    private Rect rect; // for RECT
+
+    private List<Point> freeLine; // for FREE
+    private Integer lineWidth; // for FREE
+
+    public DrawingObject() {
+    }
+
+    public DrawingObject(DrawingType type) {
+        this.type = type;
+    }
+
+    public DrawingType getType() {
+        return type;
+    }
+
+    public void setType(DrawingType type) {
+        this.type = type;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public Integer getColor() {
+        return color;
+    }
+
+    public void setColor(Integer color) {
+        this.color = color;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
+    public int getTextSize() {
+        return textSize;
+    }
+
+    public void setTextSize(int textSize) {
+        this.textSize = textSize;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public Integer getEmojiId() {
+        return emojiId;
+    }
+
+    public void setEmojiId(Integer emojiId) {
+        this.emojiId = emojiId;
+    }
+
+    public Point getCircleCenter() {
+        return circleCenter;
+    }
+
+    public void setCircleCenter(Point circleCenter) {
+        this.circleCenter = circleCenter;
+    }
+
+    public Integer getRadius() {
+        return radius;
+    }
+
+    public void setRadius(Integer radius) {
+        this.radius = radius;
+    }
+
+    public Rect getRect() {
+        return rect;
+    }
+
+    public void setRect(Rect rect) {
+        this.rect = rect;
+    }
+
+    public List<Point> getFreeLine() {
+        return freeLine;
+    }
+
+
+    public Integer getLineWidth() {
+        return lineWidth;
+    }
+
+    public void setLineWidth(Integer lineWidth) {
+        this.lineWidth = lineWidth;
+    }
+
+    public void setFreeLine(List<Point> freeLine) {
+        this.freeLine = freeLine;
+    }
+
+    public void undo() {
+        isActive = false;
+    }
+}

@@ -1,0 +1,772 @@
+package com.iems5722.group5;
+
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.PointF;
+import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.iems5722.group5.DrawingObject.DrawingType;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.UUID;
+
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
+import io.socket.engineio.client.EngineIOException;
+
+import static android.R.attr.data;
+
+/******************************************************
+ *  DrawingBoardActivity is extracted from the project on
+ *  https://gitlab.com/ankit_aggarwal/DrawingFun/tree/master
+ *
+ * The comment "*****IEMS5722 Group5*****" will be added
+ * before a block of code  if it is added/modified by our group
+ *
+ *******************************************************/
+public class DrawingBoardActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private DrawingView mDrawView;
+    private ImageButton mIvCurrPaint;
+
+    private float mSmallBrush, mMediumBrush, mLargeBrush;
+
+    //*****IEMS5722 Group5*****
+    public static String inputText;
+    public static Socket socket;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_drawing_board);
+
+        //*****IEMS5722 Group5*****
+        //get image bitmap from ChatActivity
+        Intent intent = getIntent();
+        byte[] byteArray = intent.getByteArrayExtra("image");
+        Log.d("byteArray=", String.valueOf(byteArray.length));
+
+        Bitmap bgBitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+        Log.d("bgBitmap=", String.valueOf(bgBitmap.getHeight()));
+
+        //get brush sizes from resources
+        mSmallBrush = getResources().getInteger(R.integer.small_size);
+        mMediumBrush = getResources().getInteger(R.integer.medium_size);
+        mLargeBrush = getResources().getInteger(R.integer.large_size);
+
+        //get drawing view's instance
+        mDrawView = (DrawingView) findViewById(R.id.drawing);
+        mDrawView.bgBitmap = bgBitmap;
+
+        //set current color view as selected
+        LinearLayout paintLayout = (LinearLayout) findViewById(R.id.paint_colors);
+        if (paintLayout != null) {
+            mIvCurrPaint = (ImageButton) paintLayout.getChildAt(0);
+
+            if (mIvCurrPaint != null) {
+                mIvCurrPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
+            }
+        }
+
+        //set click listeners on new drawing button
+        //*****IEMS5722 Group5*****
+/*        ImageButton btnNew = (ImageButton) findViewById(R.id.btn_new);
+        if (btnNew != null) {
+            btnNew.setOnClickListener(this);
+        }*/
+
+        //set click listeners on brush button
+        ImageButton btnDraw = (ImageButton) findViewById(R.id.btn_draw);
+        if (btnDraw != null) {
+            btnDraw.setOnClickListener(this);
+        }
+
+        //set click listeners on erase button
+        ImageButton btnErase = (ImageButton) findViewById(R.id.btn_erase);
+        if (btnErase != null) {
+            btnErase.setOnClickListener(this);
+        }
+
+        //set click listeners on save button
+        ImageButton btnSave = (ImageButton) findViewById(R.id.btn_save);
+        if (btnSave != null) {
+            btnSave.setOnClickListener(this);
+        }
+
+        //set click listeners on fill button
+        //*****IEMS5722 Group5*****
+/*        ImageButton btnFill = (ImageButton) findViewById(R.id.btn_fill);
+        if (btnFill != null) {
+            btnFill.setOnClickListener(this);
+        }*/
+
+        //*****IEMS5722 Group5*****
+        //set click listeners on text button
+        ImageButton btnText = (ImageButton) findViewById(R.id.btn_text);
+        if (btnText != null) {
+            btnText.setOnClickListener(this);
+        }
+
+        //*****IEMS5722 Group5*****
+        //set click listeners on undo button
+        ImageButton btnUndo = (ImageButton) findViewById(R.id.btn_undo);
+        if (btnUndo != null) {
+            btnUndo.setOnClickListener(this);
+        }
+
+        //set initial brush size
+        mDrawView.setBrushSize(mMediumBrush);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //***** Create the websocket for common drawing board*****
+        try {
+            socket = IO.socket(getString(R.string.WEBSOCKET_URL));
+        } catch (Exception e) {
+            //throw new RuntimeException(e);
+            Log.d("WebSocket_Exception: ", e.getMessage());
+        }
+        socket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
+        socket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+        socket.on(Socket.EVENT_CONNECT, onConnectSuccess);
+
+        socket.connect();
+    }
+
+    //*****IEMS5722 Group5*****
+    private Emitter.Listener onConnectError = new Emitter.Listener() {
+
+    @Override
+    public void call(final Object... args) {
+        EngineIOException data = (EngineIOException) args[0];
+        Log.d("onConnectError", data.toString());
+
+/*       runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+        }
+    });*/
+}
+    };
+
+    //*****IEMS5722 Group5*****
+    private Emitter.Listener onConnectSuccess = new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            //JSONObject data = (JSONObject) args[0];
+            Log.d("onConnectSuccess", "connected");
+/*                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                    }
+                });*/
+
+            socket.on("event_server_status", onEventServerStatus);
+            socket.on("event_draw", onEventDraw);
+            socket.on("event_undo", onEventUndo);
+            socket.on("event_FD_Start", onEventFDStart);
+            socket.on("event_FD_Move", onEventFDMove);
+            socket.on("event_FD_Finish", onEventFDFinish);
+        }
+    };
+
+    private Emitter.Listener onEventFDFinish = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+
+            try {
+
+                JSONObject data = (JSONObject) args[0];
+                Log.d("onEventFDFinish", data.toString());
+
+                final String userId = data.getString("user_id");
+                Log.d("onEventFDFinish", "userId = " + userId);
+                if(!userId.equals(String.valueOf(SignInActivity.guser_id))) {
+
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            mDrawView.addFreeLineFinish(userId);
+                        }
+                    });
+                }
+
+            }
+            catch (Exception e) {
+                Log.d("Except onEventFDStart:", e.getMessage());
+            }
+
+        }
+    };
+
+    private Emitter.Listener onEventFDMove = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+
+            try {
+
+                JSONObject data = (JSONObject) args[0];
+                Log.d("onEventFDMove", data.toString());
+
+                final String userId = data.getString("user_id");
+                Log.d("onEventFDMove", "userId = " + userId);
+                if(!userId.equals(String.valueOf(SignInActivity.guser_id))) {
+
+
+                        Log.d("onEventFDMove", "DrawingType.FREE");
+                        final float x = Float.parseFloat(data.getString("x"));
+                        Log.d("onEventFDMove", "x =" + x);
+                        final float y = Float.parseFloat(data.getString("y"));
+                        Log.d("onEventFDMove", "y =" + y);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mDrawView.addFreeLineMove(userId, x, y);
+                            }
+                        });
+                }
+
+            }
+            catch (Exception e) {
+                Log.d("Except onEventFDStart:", e.getMessage());
+            }
+
+        }
+    };
+
+    private Emitter.Listener onEventFDStart = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+
+            try {
+                final DrawingObject obj = new DrawingObject();
+
+                JSONObject data = (JSONObject) args[0];
+                Log.d("onEventFDStart", data.toString());
+
+                String type = data.getString("type");
+                Log.d("onEventFDStart", "type = " + type);
+
+                String userId = data.getString("user_id");
+                Log.d("onEventFDStart", "userId = " + userId);
+                if(!userId.equals(String.valueOf(SignInActivity.guser_id))) {
+
+                    if (type.equals(String.valueOf(DrawingObject.DrawingType.FREE))) {
+
+                        Log.d("onEventFDStart", "DrawingType.FREE");
+                        String timestamp = data.getString("timestamp");
+                        final String linewidth = data.getString("linewidth");
+
+                        Log.d("onEventFDStart", "linewidth =" + linewidth);
+                        final int color = data.getInt("color");
+                        Log.d("onEventFDStart", "color =" + color);
+
+                        ArrayList<PointF> freeLine = new ArrayList<PointF>();
+                        JSONObject coord_array = data.getJSONObject("free_points");
+                        //for(int i = 0; i < coord_array.length(); i++) {
+                            double x = coord_array.getDouble("x");
+                            double y = coord_array.getDouble("y");
+                            freeLine.add(new PointF((float)x, (float)y));
+                        //}
+
+                        Log.d("onEventFDStart", "free_points=" + freeLine.toString());
+
+                        obj.setType(DrawingType.FREE);
+                        obj.setUserID(userId); //TODO login user id
+                        obj.setTimestamp(timestamp);
+                        obj.setColor(color);
+                        obj.setActive(true);
+
+                        obj.setLineWidth(Math.round(Float.valueOf(linewidth)));
+                        obj.setFreeLine(freeLine);
+                        obj.setFreePath(new Path());
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mDrawView.addFreeLineStart(obj);
+                            }
+                        });
+
+                    }
+
+                }
+
+            }
+            catch (Exception e) {
+                Log.d("Except onEventFDStart:", e.getMessage());
+            }
+
+        }
+    };
+
+    private Emitter.Listener onEventServerStatus = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+
+            try {
+                //Dont know why sometimes it appears as args[1]
+                JSONObject data;
+                if(args[0] instanceof String)
+                {
+                    data  = (JSONObject) args[1];
+                }
+                else
+                {
+                    data = (JSONObject) args[0];
+                }
+
+                Log.d("onEventServerStatus", data.toString());
+                final String status = data.getString("Status");
+                final String onlineUserCount = data.getString("OnlineUserCount");
+                Log.d("onEventServerStatus", "status =" + status);
+                String timestamp = data.getString("TimeStamp");
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        TextView usercount = (TextView) findViewById(R.id.textView_onlineuser);
+                        TextView server_message = (TextView) findViewById(R.id.textView_servermessage);
+                        usercount.setText("Online user: "+onlineUserCount);
+                        server_message.setText(status);
+                    }
+
+                });
+
+            }
+            catch (Exception e) {
+                Log.d("Except on ServerStatus:", e.getMessage());
+            }
+
+        }
+    };
+
+    private Emitter.Listener onEventUndo = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+
+            try {
+
+                final DrawingObject obj = new DrawingObject();
+
+                JSONObject data = (JSONObject) args[0];
+                Log.d("onEventUndo", data.toString());
+
+                //String data_type = data.getString("data_type");
+                //Log.d("onEventDraw", "data_type = " + data_type);
+
+                final String userId = data.getString("user_id");
+                Log.d("onEventDraw", "userId = " + userId);
+
+                if(!userId.equals(String.valueOf(SignInActivity.guser_id))) {
+                    final String timestamp = data.getString("timestamp");
+                    Log.d("onEventDraw", "timestamp =" + timestamp);
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            mDrawView.undoDrawingObject(userId, timestamp);
+                        }
+                    });
+
+                }
+
+            } catch (Exception e) {
+                Log.d("Exception on BUndo:", e.getMessage());
+            }
+
+        }
+    };
+
+    private Emitter.Listener onEventDraw = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+
+            try {
+
+                final DrawingObject obj = new DrawingObject();
+
+                JSONObject data = (JSONObject) args[0];
+                Log.d("onEventDraw", data.toString());
+
+                String type = data.getString("type");
+                Log.d("onEventDraw", "type = " + type);
+
+                String userId = data.getString("user_id");
+                Log.d("onEventDraw", "userId = " + userId);
+                if(!userId.equals(String.valueOf(SignInActivity.guser_id))) {
+
+                    if (type.equals(String.valueOf(DrawingObject.DrawingType.TXT))) {
+
+                        Log.d("onEventDraw", "DrawingType.TXT");
+                        String timestamp = data.getString("timestamp");
+                        final String text = data.getString("text");
+                        final String textsize = data.getString("textsize");
+
+                        Log.d("onEventDraw", "text =" + text);
+                        //String timestamp = data.getString("timestamp");
+                        final float x = (float) data.getDouble("x");
+                        final float y = (float) data.getDouble("y");
+                        final int color = data.getInt("color");
+
+                        Log.d("onEventDraw", "x=" + x);
+                        Log.d("onEventDraw", "y=" + y);
+                        Log.d("onEventDraw", "color =" + color);
+
+                        obj.setType(DrawingType.TXT);
+                        obj.setUserID(userId); //TODO login user id
+                        obj.setTimestamp(timestamp);
+                        obj.setColor(color);
+                        obj.setActive(true);
+
+                        obj.setText(text);
+                        obj.setX(x);
+                        obj.setY(y);
+                        obj.setTextSize(Integer.parseInt(textsize)); //TODO
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mDrawView.addTextData(obj);
+                            }
+                        });
+
+
+                    } else {
+                        //TODO emoji, circle, rect, free line
+                    }
+
+                    //if (!obj.getUserID().equals(SignInActivity.guser_id)) {
+                        //mDrawView.wholeList.add(obj);
+                    //}
+
+                }
+
+            } catch (JSONException e) {
+                //Log.d("SocketServerTest2", "json error");
+            } catch (Exception e) {
+            }
+
+        }
+    };
+
+    //use chosen color
+    public void paintClicked(View view) {
+
+        //set erase as false (if set previously as true)
+        mDrawView.setErase(false);
+
+        //reset brush size (if some other option was selected previously)
+        mDrawView.setBrushSize(mDrawView.getLastBrushSize());
+
+        //update color
+        if (view != mIvCurrPaint) {
+
+            //get the clicked image button
+            ImageButton ivColorPallet = (ImageButton) view;
+
+            //get color from tag
+            String color = view.getTag().toString();
+
+            //set new brush color
+            mDrawView.setColor(color);
+
+            //set current button's background as pressed button
+            ivColorPallet.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
+
+            //set previous button's background as unpressed button
+            mIvCurrPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint));
+
+            //set current view as this button view
+            mIvCurrPaint = (ImageButton) view;
+        }
+
+    }
+
+    //use chosen patten
+    public void patternClicked(View view) {
+
+        //set erase as false (if set previously as true)
+        mDrawView.setErase(false);
+
+        //reset brush size (if some other option was selected previously)
+        mDrawView.setBrushSize(mDrawView.getLastBrushSize());
+
+        //update pattern
+        if (view != mIvCurrPaint) {
+
+            //get the clicked image button
+            ImageButton ivPatten = (ImageButton) view;
+
+            //set patten to brush
+            mDrawView.setPattern(view.getTag().toString());
+
+            //set current button's background as pressed button
+            ivPatten.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
+
+            //set previous button's background as unpressed button
+            mIvCurrPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint));
+
+            //set current view as this button view
+            mIvCurrPaint = (ImageButton) view;
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+
+            //*****IEMS5722 Group5*****
+/*            case R.id.btn_new:
+                //new button
+                setNewCanvas();
+                break;*/
+
+            case R.id.btn_draw:
+                //draw button clicked
+                setBrushSize();
+                break;
+
+            case R.id.btn_erase:
+                //switch to erase - choose size
+                switchToEraseMode();
+                break;
+
+            case R.id.btn_save:
+                //save drawing
+                saveDrawing();
+                break;
+
+            //*****IEMS5722 Group5*****
+/*            case R.id.btn_fill:
+                //fill button
+                mDrawView.fillColor();
+                break;*/
+
+            //*****IEMS5722 Group5*****
+            case R.id.btn_text:
+                getTextToCanvas();
+                //mDrawView.invalidate();
+                break;
+
+            //*****IEMS5722 Group5*****
+            case R.id.btn_undo:
+                //mDrawView.isUndo();
+                mDrawView.undoMyDrawingObject();
+                break;
+
+            default:
+                break;
+
+        }
+    }
+
+    private void setNewCanvas() {
+        AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
+        newDialog.setTitle("New drawing");
+        newDialog.setMessage("Start new drawing (you will lose the current drawing)?");
+        newDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                mDrawView.startNew();
+                dialog.dismiss();
+            }
+        });
+        newDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        newDialog.show();
+    }
+
+    private void setBrushSize() {
+        final Dialog brushDialog = new Dialog(this);
+        brushDialog.setTitle("Brush size:");
+        brushDialog.setContentView(R.layout.brush_chooser);
+
+        ImageButton smallBtn = (ImageButton) brushDialog.findViewById(R.id.small_brush);
+        smallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawView.setErase(false);
+                mDrawView.setBrushSize(mSmallBrush);
+                mDrawView.setLastBrushSize(mSmallBrush);
+                brushDialog.dismiss();
+            }
+        });
+
+        ImageButton mediumBtn = (ImageButton) brushDialog.findViewById(R.id.medium_brush);
+        mediumBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawView.setErase(false);
+                mDrawView.setBrushSize(mMediumBrush);
+                mDrawView.setLastBrushSize(mMediumBrush);
+                brushDialog.dismiss();
+            }
+        });
+
+        ImageButton largeBtn = (ImageButton) brushDialog.findViewById(R.id.large_brush);
+        largeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawView.setErase(false);
+                mDrawView.setBrushSize(mLargeBrush);
+                mDrawView.setLastBrushSize(mLargeBrush);
+                brushDialog.dismiss();
+            }
+        });
+
+        brushDialog.show();
+    }
+
+    private void switchToEraseMode() {
+        final Dialog brushDialog = new Dialog(this);
+        brushDialog.setTitle("Eraser size:");
+        brushDialog.setContentView(R.layout.brush_chooser);
+
+        ImageButton smallBtn = (ImageButton) brushDialog.findViewById(R.id.small_brush);
+        smallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawView.setErase(true);
+                mDrawView.setBrushSize(mSmallBrush);
+                brushDialog.dismiss();
+            }
+        });
+        ImageButton mediumBtn = (ImageButton) brushDialog.findViewById(R.id.medium_brush);
+        mediumBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawView.setErase(true);
+                mDrawView.setBrushSize(mMediumBrush);
+                brushDialog.dismiss();
+            }
+        });
+        ImageButton largeBtn = (ImageButton) brushDialog.findViewById(R.id.large_brush);
+        largeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawView.setErase(true);
+                mDrawView.setBrushSize(mLargeBrush);
+                brushDialog.dismiss();
+            }
+        });
+
+        brushDialog.show();
+    }
+
+    //save drawing to gallery
+    private void saveDrawing() {
+        AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+        saveDialog.setTitle("Save drawing");
+        saveDialog.setMessage("Save drawing to device Gallery?");
+        saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                //save drawing
+                mDrawView.setDrawingCacheEnabled(true);
+                //
+                String filename = UUID.randomUUID().toString();
+                Log.d("filename = ", filename);
+
+                String imgSaved = MediaStore.Images.Media.insertImage(
+                        getContentResolver(), mDrawView.getDrawingCache(),
+                        filename + ".png", "drawing");
+
+                Log.d("testSave", "imgSaved=" + imgSaved);
+
+                if (imgSaved != null) {
+                    Toast savedToast = Toast.makeText(getApplicationContext(),
+                            "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
+                    savedToast.show();
+                } else {
+                    Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                            "Oops! Image could not be saved.", Toast.LENGTH_SHORT);
+                    unsavedToast.show();
+                }
+
+                mDrawView.destroyDrawingCache();
+            }
+        });
+        saveDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        saveDialog.show();
+    }
+
+    //*****IEMS5722 Group5*****
+    private void getTextToCanvas(){
+        Log.d("addText", "addTextToCanvas");
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.drawing_add_text_dialog, null);
+        dialogBuilder.setView(dialogView);
+        final EditText textContent = (EditText) dialogView.findViewById(R.id.add_text);
+        dialogBuilder.setTitle("Enter text to add:");
+        dialogBuilder.setMessage("");
+        dialogBuilder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                inputText = textContent.getText().toString();
+                if(!inputText.equals("") || !inputText.isEmpty()){
+                    // assign the content to the TextView object
+                    //mTextOnImage.setText(inputText);
+                    //mDrawView.setText(inputText);
+                    mDrawView.addText();
+                    Log.d("Add text", "input text = " + inputText);
+
+                    Toast textToast = Toast.makeText(getApplicationContext(),
+                            "Select a point to insert the text!", Toast.LENGTH_SHORT);
+                    textToast.show();
+
+                }
+            }
+        });
+        dialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog b = dialogBuilder.create();
+        b.show();
+    }
+
+    //*****IEMS5722 Group5*****
+    @Override
+    public void onStop() {
+        super.onStop();
+        socket.disconnect();
+        socket.off(Socket.EVENT_CONNECT, onConnectSuccess);
+        socket.off("event_server_status", onEventServerStatus);
+    }
+}

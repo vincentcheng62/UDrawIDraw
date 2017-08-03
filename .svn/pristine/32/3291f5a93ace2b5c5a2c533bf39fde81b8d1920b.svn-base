@@ -1,0 +1,17 @@
+[program:websocket]
+
+command = python -u websocket.py
+
+directory = /home/olivia/asgn3
+
+user = olivia
+
+autostart = true
+
+autorestart = true
+
+stdout_logfile = /home/olivia/asgn3/templates/websocket.log
+
+;loglevel=debug
+
+;redirect_stderr = true

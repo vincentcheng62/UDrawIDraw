@@ -1,0 +1,94 @@
+// ref: http://stacktips.com/tutorials/android/loading-image-asynchronously-in-android-listview
+package com.iems5722.group5.AsyncTasks;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.ImageView;
+
+import com.iems5722.group5.MessageItem;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.ref.WeakReference;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+/**
+ * Created by AlexLiu on 21/4/17.
+ */
+
+public class DownloadImageAsyncTask extends AsyncTask<String, Void, Bitmap> {
+    private final WeakReference<ImageView> imageViewReference;
+    private MessageItem msgItem;
+
+    public DownloadImageAsyncTask(MessageItem msg, ImageView imageView) {
+        imageViewReference = new WeakReference<ImageView>(imageView);
+        msgItem = msg;
+    }
+
+    @Override
+    protected Bitmap doInBackground(String... params) {
+        try {
+            return BitmapFactory.decodeStream((InputStream) new URL(params[0]).getContent());
+        } catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+        return null;
+        //return downloadBitmap(params[0]);
+    }
+
+    @Override
+    protected void onPostExecute(Bitmap bitmap) {
+        if (isCancelled()) {
+            bitmap = null;
+        }
+        if (bitmap != null) {
+            msgItem.setImage(bitmap);
+            ImageView imageView = imageViewReference.get();
+            if (imageView != null) {
+                imageView.setImageBitmap(bitmap);
+            }
+        }
+/*
+        if (imageViewReference != null) {
+            ImageView imageView = imageViewReference.get();
+            if (imageView != null) {
+                if (bitmap != null) {
+                    imageView.setImageBitmap(bitmap);
+                } else {
+                    Drawable placeholder = imageView.getContext().getResources().getDrawable(R.drawable.placeholder);
+                    imageView.setImageDrawable(placeholder);
+                }
+            }
+        }*/
+    }
+    /*private Bitmap downloadBitmap(String url) {
+        HttpURLConnection urlConnection = null;
+        try {
+            URL uri = new URL(url);
+            urlConnection = (HttpURLConnection) uri.openConnection();
+            int statusCode = urlConnection.getResponseCode();
+            if (statusCode != HttpURLConnection.HTTP_OK) {
+                return null;
+            }
+
+            InputStream inputStream = urlConnection.getInputStream();
+            if (inputStream != null) {
+                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                return bitmap;
+            }
+        } catch (Exception e) {
+            urlConnection.disconnect();
+            Log.w("ImageDownloader", "Error downloading image from " + url);
+        } finally {
+            if (urlConnection != null) {
+                urlConnection.disconnect();
+            }
+        }
+        return null;
+    }*/
+}

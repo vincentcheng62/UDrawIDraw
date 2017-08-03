@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_d7c0a325502a372b47c883b93bf1ecae36b043b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_48ec640f4b59d3dbde4045266647922948e25a16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_9dcb7f21da84b17036bf0f7477ebb431f51df24a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_d1960f74692f512d922db6d0797510918b5f1ee5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74d1712880eb2b4ab37ddf3c6a3232c883756726">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.0_22fda50bc2d1b2f76b55a9a68313c1187febfa66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_efc541a6c5c6886018d2c0403659bc5ca83c36c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_4689c407dcfd76852d4b389e9a650bbbce38906d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_114e312d749a74a9719c680f2492bcd42ac4dcd9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_3d4dec51c096e3e7077907cb0282809e023a288a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_c2a25dffba6261b50fc083284bf7c187114d826f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a93aa431de60b775c91158433f3c687f1d32cb9c">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.0_2ef946476731ae8fe5850f4bed86c2cd384eb44c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_04708f52b9d14167493c6789e2e4915dc9dd5926/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.0_8afe4ca4641b3ac0674e7cb2d4373cd7564d969e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ef21408e3142ffbfbd4a7ec1762c3325c6c386c">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.6.0_4e68d564451240e4031798f30b4a9806d7f65a24/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.0_a304ed04ef23f7bcb76285062ff7b15f739bd183/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9f41e6463de88c3f979d796382fc24fb7e9cd41">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.0_3f73070e4206ca753f196bfba6e7d975948b9d11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd11b3899f275668a9355f19cea2c2320f5f9d14">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.0_ec42f5525bdbf40b9cd6118d2e46103f8d11abcb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1f4bb2577a30d0b3268fed038ed59230709ad593">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.6.0_0b5b3673377614e08795504b42d9f0768f5a61c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e834bd9b82f48234be32923f41a1f067fa9ff3b">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8a9e02a3ee2644b4244bb8176b7d9a6a7e3c929b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="72c24b8395a55f056e513e3fe26ba2fea9ebb5bd">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a8c7d4985ef40e0bd6c4ac7fd25b3bc59beb882f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.0_7f58c08f6b6f79d94b0731820a950d699136232b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.0_b6d65c766df7fc32c544a34afa722db51c26dde3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d39f676be8400123523882d189a1d84040d34339">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.0_ae027677f5956c4e49a6de2d40df643f20ec1ffe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_014af409283155a77db12dcbfaabc777abeea4ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hmcheng/udrawidraw/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/Users/hmcheng/udrawidraw/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_c391a31ce9ab7338f6f68e8c6f51810a18271f4d/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "925434873820",
+    "firebase_url": "https://iems5722-group5.firebaseio.com",
+    "project_id": "iems5722-group5",
+    "storage_bucket": "iems5722-group5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925434873820:android:f25b59e30f158abb",
+        "android_client_info": {
+          "package_name": "com.iems5722.group5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "925434873820-qr3fmcn5un1s6i4stvu5htchitfdn4vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6gJQPRKM_-Y97ujeOKVwXgRrhZ-oIc-o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

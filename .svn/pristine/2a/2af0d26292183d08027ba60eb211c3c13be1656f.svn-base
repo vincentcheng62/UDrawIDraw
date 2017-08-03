@@ -1,0 +1,2145 @@
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/Apr/2017 15:35:07] "POST /socket.io/?EIO=3&transport=polling&t=1491982507711-38&sid=d070f6da29414df4a1b77515af68d6f5 HTTP/1.1" 400 -
+127.0.0.1 - - [12/Apr/2017 15:35:07] "POST /socket.io/?EIO=3&transport=polling&t=1491982507712-39&sid=d070f6da29414df4a1b77515af68d6f5 HTTP/1.1" 400 -
+127.0.0.1 - - [12/Apr/2017 15:35:21] "GET /socket.io/?EIO=3&transport=polling&t=1491982522246-40 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:35:21] "GET /socket.io/?EIO=3&transport=polling&t=1491982522442-41&sid=bb313bbae5db4c8681301867c599fe43 HTTP/1.1" 200 -
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+ * Restarting with stat
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Debugger is active!
+ * Debugger pin code: 737-489-224
+127.0.0.1 - - [12/Apr/2017 15:35:43] "POST /socket.io/?EIO=3&transport=polling&t=1491982543780-43&sid=bb313bbae5db4c8681301867c599fe43 HTTP/1.1" 400 -
+127.0.0.1 - - [12/Apr/2017 15:35:50] "GET /socket.io/?EIO=3&transport=polling&t=1491982550251-44 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:35:50] "GET /socket.io/?EIO=3&transport=polling&t=1491982550439-45&sid=91db1ef6107a41168dc6926b1834d7c6 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:35:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:15] "POST /socket.io/?EIO=3&transport=polling&t=1491982575441-47&sid=91db1ef6107a41168dc6926b1834d7c6 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:15] "GET /socket.io/?EIO=3&transport=polling&t=1491982550618-46&sid=91db1ef6107a41168dc6926b1834d7c6 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:40] "POST /socket.io/?EIO=3&transport=polling&t=1491982600803-49&sid=91db1ef6107a41168dc6926b1834d7c6 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:40] "GET /socket.io/?EIO=3&transport=polling&t=1491982575802-48&sid=91db1ef6107a41168dc6926b1834d7c6 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:43] "GET /socket.io/?EIO=3&transport=polling&t=1491982602988-0 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:43] "GET /socket.io/?EIO=3&transport=polling&t=1491982601042-50&sid=91db1ef6107a41168dc6926b1834d7c6 HTTP/1.1" 200 -
+/usr/local/lib/python2.7/dist-packages/werkzeug/filesystem.py:63: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ANSI_X3.4-1968'
+  BrokenFilesystemWarning)
+Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 196, in execute
+    write(data)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 164, in write
+    self.send_header(key, value)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 401, in send_header
+    self.wfile.write("%s: %s\r\n" % (keyword, value))
+IOError: [Errno 32] Broken pipe
+127.0.0.1 - - [12/Apr/2017 15:36:43] "GET /socket.io/?EIO=3&transport=polling&t=1491982603168-1&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:36:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:37:08] "POST /socket.io/?EIO=3&transport=polling&t=1491982628170-3&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:37:08] "GET /socket.io/?EIO=3&transport=polling&t=1491982603347-2&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:37:33] "POST /socket.io/?EIO=3&transport=polling&t=1491982653584-5&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:37:33] "GET /socket.io/?EIO=3&transport=polling&t=1491982628581-4&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:37:58] "POST /socket.io/?EIO=3&transport=polling&t=1491982678769-7&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:37:58] "GET /socket.io/?EIO=3&transport=polling&t=1491982653767-6&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:38:02] "GET /api/asgn3/get_messages?chatroom_id=2&page=1 HTTP/1.1" 404 -
+127.0.0.1 - - [12/Apr/2017 15:38:24] "POST /socket.io/?EIO=3&transport=polling&t=1491982704738-9&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:38:24] "GET /socket.io/?EIO=3&transport=polling&t=1491982678997-8&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:38:30] "GET /api/asgn3/get_chatrooms HTTP/1.1" 404 -
+127.0.0.1 - - [12/Apr/2017 15:38:50] "POST /socket.io/?EIO=3&transport=polling&t=1491982729929-11&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:38:50] "GET /socket.io/?EIO=3&transport=polling&t=1491982704927-10&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:39:15] "POST /socket.io/?EIO=3&transport=polling&t=1491982755160-13&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:39:15] "GET /socket.io/?EIO=3&transport=polling&t=1491982730158-12&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:39:40] "POST /socket.io/?EIO=3&transport=polling&t=1491982780349-15&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:39:40] "GET /socket.io/?EIO=3&transport=polling&t=1491982755347-14&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:40:15] "POST /socket.io/?EIO=3&transport=polling&t=1491982815741-17&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:40:16] "GET /socket.io/?EIO=3&transport=polling&t=1491982780581-16&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:40:51] "POST /socket.io/?EIO=3&transport=polling&t=1491982851742-19&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:40:51] "GET /socket.io/?EIO=3&transport=polling&t=1491982816108-18&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:41:17] "POST /socket.io/?EIO=3&transport=polling&t=1491982877743-21&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:41:17] "GET /socket.io/?EIO=3&transport=polling&t=1491982851929-20&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:41:43] "POST /socket.io/?EIO=3&transport=polling&t=1491982903743-23&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:41:43] "GET /socket.io/?EIO=3&transport=polling&t=1491982877956-22&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:42:17] "POST /socket.io/?EIO=3&transport=polling&t=1491982937016-25&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:42:17] "GET /socket.io/?EIO=3&transport=polling&t=1491982903935-24&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:42:57] "POST /socket.io/?EIO=3&transport=polling&t=1491982977494-27&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 15:42:57] "GET /socket.io/?EIO=3&transport=polling&t=1491982937241-26&sid=140bc95a5fdd4f64931b67c59793b71a HTTP/1.1" 200 -
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+ * Restarting with stat
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Debugger is active!
+ * Debugger pin code: 737-489-224
+127.0.0.1 - - [12/Apr/2017 16:04:58] "GET /socket.io/?EIO=3&transport=polling&t=1491984297813-31 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:04:58] "GET /socket.io/?EIO=3&transport=polling&t=1491984298158-32&sid=59be1816eb3648b3b79419552f01e294 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:20] "POST /socket.io/?EIO=3&transport=polling&t=1491984319996-34&sid=59be1816eb3648b3b79419552f01e294 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:20] "GET /socket.io/?EIO=3&transport=polling&t=1491984298341-33&sid=59be1816eb3648b3b79419552f01e294 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:23] "POST /socket.io/?EIO=3&transport=polling&t=1491984323160-36&sid=59be1816eb3648b3b79419552f01e294 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:23] "GET /socket.io/?EIO=3&transport=polling&t=1491984320356-35&sid=59be1816eb3648b3b79419552f01e294 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:24] "GET /socket.io/?EIO=3&transport=polling&t=1491984324223-0 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:24] "GET /socket.io/?EIO=3&transport=polling&t=1491984323361-37&sid=59be1816eb3648b3b79419552f01e294 HTTP/1.1" 200 -
+/usr/local/lib/python2.7/dist-packages/werkzeug/filesystem.py:63: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ANSI_X3.4-1968'
+  BrokenFilesystemWarning)
+Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 205, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 196, in execute
+    write(data)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 164, in write
+    self.send_header(key, value)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 401, in send_header
+    self.wfile.write("%s: %s\r\n" % (keyword, value))
+IOError: [Errno 32] Broken pipe
+127.0.0.1 - - [12/Apr/2017 16:05:24] "GET /socket.io/?EIO=3&transport=polling&t=1491984324412-1&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:27] "POST /socket.io/?EIO=3&transport=polling&t=1491984327052-3&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:27] "GET /socket.io/?EIO=3&transport=polling&t=1491984324600-2&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:49] "POST /socket.io/?EIO=3&transport=polling&t=1491984349414-5&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:05:49] "GET /socket.io/?EIO=3&transport=polling&t=1491984327464-4&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:06:14] "POST /socket.io/?EIO=3&transport=polling&t=1491984374640-7&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:06:14] "GET /socket.io/?EIO=3&transport=polling&t=1491984349638-6&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:06:50] "POST /socket.io/?EIO=3&transport=polling&t=1491984410589-9&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:06:50] "GET /socket.io/?EIO=3&transport=polling&t=1491984374830-8&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:07:26] "POST /socket.io/?EIO=3&transport=polling&t=1491984446590-11&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:07:26] "GET /socket.io/?EIO=3&transport=polling&t=1491984410805-10&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:07:55] "POST /socket.io/?EIO=3&transport=polling&t=1491984475342-13&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:07:55] "GET /socket.io/?EIO=3&transport=polling&t=1491984446784-12&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 200 -
+ * Detected change in '/home/olivia/asgn3/websocket.py', reloading
+A new client is connected.
+event_undo is triggered by user_id 68667
+Json content: {u'user_id': u'68667'}
+event_undo is broadcasted to all online client!
+A new client is connected.
+event_undo is triggered by user_id 68667
+Json content: {u'user_id': u'68667'}
+event_undo is broadcasted to all online client!
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+Traceback (most recent call last):
+  File "websocket.py", line 92, in <module>
+    socketio.run(app, host="0.0.0.0", port=8000)
+  File "/usr/local/lib/python2.7/dist-packages/flask_socketio/__init__.py", line 469, in run
+    use_reloader=use_reloader, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 841, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 708, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 670, in inner
+    fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 558, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 476, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+Traceback (most recent call last):
+  File "websocket.py", line 92, in <module>
+    socketio.run(app, host="0.0.0.0", port=8000)
+  File "/usr/local/lib/python2.7/dist-packages/flask_socketio/__init__.py", line 469, in run
+    use_reloader=use_reloader, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 841, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 708, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 670, in inner
+    fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 558, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 476, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+Traceback (most recent call last):
+  File "websocket.py", line 92, in <module>
+    socketio.run(app, host="0.0.0.0", port=8000)
+  File "/usr/local/lib/python2.7/dist-packages/flask_socketio/__init__.py", line 469, in run
+    use_reloader=use_reloader, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 841, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 708, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 670, in inner
+    fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 558, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 476, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/Apr/2017 16:08:37] "POST /socket.io/?EIO=3&transport=polling&t=1491984517581-17&sid=c9d021ad547642f18cf75581db36a311 HTTP/1.1" 400 -
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/Apr/2017 16:08:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:07] "GET /socket.io/?EIO=3&transport=polling&t=1491984547158-18 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:07] "GET /socket.io/?EIO=3&transport=polling&t=1491984547341-19&sid=3981e6a326184cd4bc26c3f097ba76e5 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:11] "POST /socket.io/?EIO=3&transport=polling&t=1491984551450-21&sid=3981e6a326184cd4bc26c3f097ba76e5 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:11] "GET /socket.io/?EIO=3&transport=polling&t=1491984547522-20&sid=3981e6a326184cd4bc26c3f097ba76e5 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:35] "POST /socket.io/?EIO=3&transport=polling&t=1491984575082-23&sid=3981e6a326184cd4bc26c3f097ba76e5 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:35] "GET /socket.io/?EIO=3&transport=polling&t=1491984551830-22&sid=3981e6a326184cd4bc26c3f097ba76e5 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:57] "GET /socket.io/?EIO=3&transport=polling&t=1491984597654-0 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:09:57] "GET /socket.io/?EIO=3&transport=polling&t=1491984575309-24&sid=3981e6a326184cd4bc26c3f097ba76e5 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+127.0.0.1 - - [12/Apr/2017 16:09:57] "GET /socket.io/?EIO=3&transport=polling&t=1491984597845-1&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:10:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:10:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:10:23] "POST /socket.io/?EIO=3&transport=polling&t=1491984622848-3&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:10:23] "GET /socket.io/?EIO=3&transport=polling&t=1491984598025-2&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:10:48] "POST /socket.io/?EIO=3&transport=polling&t=1491984648257-5&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:10:48] "GET /socket.io/?EIO=3&transport=polling&t=1491984623256-4&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:11:23] "POST /socket.io/?EIO=3&transport=polling&t=1491984683732-7&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:11:23] "GET /socket.io/?EIO=3&transport=polling&t=1491984648488-6&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 200 -
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/Apr/2017 16:11:45] "POST /socket.io/?EIO=3&transport=polling&t=1491984705736-9&sid=f73d63c343454a089b181f4497eab387 HTTP/1.1" 400 -
+127.0.0.1 - - [12/Apr/2017 16:11:49] "GET / HTTP/1.1" 200 -
+A new client is connected.
+127.0.0.1 - - [12/Apr/2017 16:11:56] "GET /socket.io/?EIO=3&transport=polling&t=1491984716574-10 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:11:56] "GET /socket.io/?EIO=3&transport=polling&t=1491984716758-11&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+event_undo is triggered by user_id 68667
+Json content: {u'user_id': u'68667'}
+event_undo is broadcasted to all online client!
+127.0.0.1 - - [12/Apr/2017 16:11:58] "POST /socket.io/?EIO=3&transport=polling&t=1491984718203-13&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:11:58] "GET /socket.io/?EIO=3&transport=polling&t=1491984716940-12&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:12:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:12:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:12:21] "POST /socket.io/?EIO=3&transport=polling&t=1491984741759-15&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:12:21] "GET /socket.io/?EIO=3&transport=polling&t=1491984718390-14&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:12:47] "POST /socket.io/?EIO=3&transport=polling&t=1491984766966-17&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:12:47] "GET /socket.io/?EIO=3&transport=polling&t=1491984741964-16&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:13:22] "POST /socket.io/?EIO=3&transport=polling&t=1491984802750-19&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:13:22] "GET /socket.io/?EIO=3&transport=polling&t=1491984767192-18&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:13:48] "POST /socket.io/?EIO=3&transport=polling&t=1491984828751-21&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:13:48] "GET /socket.io/?EIO=3&transport=polling&t=1491984802956-20&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:14:14] "POST /socket.io/?EIO=3&transport=polling&t=1491984854751-23&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:14:14] "GET /socket.io/?EIO=3&transport=polling&t=1491984828938-22&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:14:49] "POST /socket.io/?EIO=3&transport=polling&t=1491984889317-25&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:14:49] "GET /socket.io/?EIO=3&transport=polling&t=1491984854978-24&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:15:24] "POST /socket.io/?EIO=3&transport=polling&t=1491984924753-27&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:15:24] "GET /socket.io/?EIO=3&transport=polling&t=1491984889554-26&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:15:50] "POST /socket.io/?EIO=3&transport=polling&t=1491984950754-29&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:15:50] "GET /socket.io/?EIO=3&transport=polling&t=1491984924982-28&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:16:17] "POST /socket.io/?EIO=3&transport=polling&t=1491984977261-31&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:16:17] "GET /socket.io/?EIO=3&transport=polling&t=1491984950979-30&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 200 -
+WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+127.0.0.1 - - [12/Apr/2017 16:16:36] "POST /socket.io/?EIO=3&transport=polling&t=1491984995927-33&sid=4be0fa2b172a409f8054082b3353080e HTTP/1.1" 400 -
+127.0.0.1 - - [12/Apr/2017 16:16:43] "GET / HTTP/1.1" 200 -
+A new client is connected.
+127.0.0.1 - - [12/Apr/2017 16:16:43] "GET /socket.io/?EIO=3&transport=polling&t=1491985003783-34 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:16:44] "GET /socket.io/?EIO=3&transport=polling&t=1491985003974-35&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+event_undo is triggered by user_id 68667
+Json content: {u'user_id': u'68667'}
+event_undo is broadcasted to all online client!
+127.0.0.1 - - [12/Apr/2017 16:16:54] "POST /socket.io/?EIO=3&transport=polling&t=1491985014391-37&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:16:54] "GET /socket.io/?EIO=3&transport=polling&t=1491985004166-36&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:09] "POST /socket.io/?EIO=3&transport=polling&t=1491985028976-39&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:09] "GET /socket.io/?EIO=3&transport=polling&t=1491985014600-38&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:46] "POST /socket.io/?EIO=3&transport=polling&t=1491985066268-41&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+127.0.0.1 - - [12/Apr/2017 16:17:46] "GET /socket.io/?EIO=3&transport=polling&t=1491985029194-40&sid=6523535199254c1594ba66325f4922cf HTTP/1.1" 200 -
+A new client is connected.
+event_undo is triggered by user_id 68667
+Json content: {u'user_id': u'68667'}
+event_undo is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 35598)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 35602)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 35606)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'12345', u'y': 481, u'x': 474, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'12345', u'y': 372, u'x': 447, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 35995)
+----------------------------------------
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36024)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36036)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36051)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36065)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36070)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36080)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36090)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36098)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36106)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36111)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36116)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36122)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36244)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36257)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36283)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36329)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36366)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36489)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36504)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36624)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36659)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36684)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36693)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36706)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36727)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36752)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36819)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36824)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36855)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36890)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36899)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 36975)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37124)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37157)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37182)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37215)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37242)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37255)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37272)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37335)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37342)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37401)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37408)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37429)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37468)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37511)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37536)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37545)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37578)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 37640)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38108)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38207)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38252)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38334)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38341)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38388)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38517)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38524)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38533)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38538)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38559)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38756)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 38780)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'123', u'y': 394.359375, u'x': 443.3935546875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39248)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39260)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39486)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39494)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 406.37109375, u'x': 451.402587890625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39526)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39529)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 213.24609375, u'x': 468.409423828125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39544)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'11111', u'y': 283.32421875, u'x': 344.31884765625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 505.39453125, u'x': 715.634765625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 625.453125, u'x': 183.1494140625, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39566)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39569)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 241.25390625, u'x': 303.284912109375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 382.34765625, u'x': 765.66650390625, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 691.48828125, u'x': 171.15234375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39590)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 204.28125, u'x': 381.331787109375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'12345', u'y': 448.3828125, u'x': 715.634765625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 654.45703125, u'x': 154.1455078125, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39611)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 221.2734375, u'x': 468.409423828125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'12345', u'y': 514.41796875, u'x': 373.32275390625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 745.51171875, u'x': 208.1982421875, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39638)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 72.2109375, u'x': 501.434326171875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 431.390625, u'x': 204.17724609375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 679.4765625, u'x': 843.746337890625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39693)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39698)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'11111', u'y': 192.26953125, u'x': 212.186279296875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 303.3046875, u'x': 666.591796875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 728.51953125, u'x': 224.183349609375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39713)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39716)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39719)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 283.32421875, u'x': 323.291015625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 518.40234375, u'x': 823.740234375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 728.51953125, u'x': 96.07177734375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39736)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'11111', u'y': 320.296875, u'x': 336.309814453125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 501.41015625, u'x': 847.767333984375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 745.51171875, u'x': 166.142578125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39747)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'1111', u'y': 303.3046875, u'x': 344.31884765625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'22222', u'y': 571.4296875, u'x': 769.6875, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'3333', u'y': 637.46484375, u'x': 154.1455078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39780)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'11111', u'y': 361.3125, u'x': 414.356689453125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 497.42578125, u'x': 638.001708984375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16777216, u'text': u'33333', u'y': 794.5546875, u'x': 162.154541015625, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39811)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 411.3515625, u'x': 459.41162109375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 769.53515625, u'x': 204.17724609375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 712.5234375, u'x': 703.6376953125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39836)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39839)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 460.39453125, u'x': 711.646728515625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 175.21875, u'x': 381.331787109375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'66666', u'y': 596.44921875, u'x': 138.12744140625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16737895, u'text': u'7777', u'y': 741.52734375, u'x': 501.434326171875, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39854)
+----------------------------------------
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'11111', u'y': 427.34765625, u'x': 327.279052734375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 654.45703125, u'x': 777.696533203125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 757.5234375, u'x': 179.161376953125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 39871)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40185)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40190)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40199)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40208)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40215)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40220)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40229)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40234)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40239)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40244)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40257)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40266)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40271)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40284)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40289)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40296)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40301)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40306)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40333)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40573)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40582)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40593)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40614)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40623)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40634)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40677)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40706)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 40711)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'11111', u'y': 213.24609375, u'x': 299.263916015625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'text': u'22222', u'y': 472.40625, u'x': 740.650634765625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'3333', u'y': 691.48828125, u'x': 212.186279296875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41184)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41208)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 307.2890625, u'x': 373.32275390625, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41220)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 204.28125, u'x': 138.12744140625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41292)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'text': u'12345', u'y': 237.26953125, u'x': 266.239013671875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'22222', u'y': 373.32421875, u'x': 790.71533203125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 675.4921875, u'x': 253.22021484375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -65536, u'text': u'44444', u'y': 774.515625, u'x': 649.5849609375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41386)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41391)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'text': u'12345', u'y': 200.23828125, u'x': 233.214111328125, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'22222', u'y': 431.390625, u'x': 740.650634765625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'text': u'33333', u'y': 666.46875, u'x': 171.15234375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16737895, u'text': u'44444', u'y': 877.58203125, u'x': 674.600830078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'text': u'12345', u'y': 151.25390625, u'x': 175.140380859375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -65536, u'text': u'22222', u'y': 316.3125, u'x': 806.7333984375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'33333', u'y': 691.48828125, u'x': 266.239013671875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'text': u'44444', u'y': 901.60546875, u'x': 674.600830078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -6750055, u'text': u'55555', u'y': 588.421875, u'x': 649.5849609375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41687)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41728)
+----------------------------------------
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41734)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41750)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415161520102', u'text': u'12345', u'y': 303.3046875, u'x': 154.1455078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415161534026', u'text': u'22222', u'y': 448.3828125, u'x': 645.56396484375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -65536, u'timestamp': u'20170415161540777', u'text': u'33333', u'y': 646.48828125, u'x': 200.189208984375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16737895, u'timestamp': u'20170415161547821', u'text': u'33333', u'y': 736.546875, u'x': 653.572998046875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -6750055, u'timestamp': u'20170415161559093', u'text': u'44444', u'y': 864.57421875, u'x': 315.281982421875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39322, u'timestamp': u'20170415161608283', u'text': u'55555', u'y': 1005.66796875, u'x': 645.56396484375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41787)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41810)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41816)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415162136180', u'text': u'12345', u'y': 402.328125, u'x': 554.498291015625, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415162145631', u'text': u'22222', u'y': 299.3203125, u'x': 171.15234375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -65536, u'timestamp': u'20170415162237780', u'text': u'33333', u'y': 728.51953125, u'x': 447.381591796875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415162252723', u'text': u'44444', u'y': 741.52734375, u'x': 150.12451171875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41864)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41884)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41909)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41926)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41928)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41933)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415164147917', u'text': u'12345', u'y': 250.27734375, u'x': 154.1455078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41965)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415164334511', u'text': u'11111', u'y': 184.2421875, u'x': 150.12451171875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41976)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 41981)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415164558883', u'text': u'11111', u'y': 233.28515625, u'x': 179.161376953125, u'type': u'TXT'}
+A client is disconnected.
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42001)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42006)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415164701551', u'text': u'11111', u'y': 316.3125, u'x': 233.214111328125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415164713830', u'text': u'22222', u'y': 427.34765625, u'x': 823.740234375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415164720864', u'text': u'33333', u'y': 736.546875, u'x': 204.17724609375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'timestamp': u'20170415164728517', u'text': u'44444', u'y': 856.60546875, u'x': 612.5390625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415164738166', u'text': u'55555', u'y': 939.6328125, u'x': 319.27001953125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42066)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42079)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415165458364', u'text': u'11111', u'y': 254.26171875, u'x': 253.22021484375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415165506251', u'text': u'22222', u'y': 444.3984375, u'x': 814.742431640625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'timestamp': u'20170415165513451', u'text': u'33333', u'y': 736.546875, u'x': 166.142578125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415165520765', u'text': u'44444', u'y': 798.5390625, u'x': 658.582763671875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16737895, u'timestamp': u'20170415165529196', u'text': u'55555', u'y': 448.3828125, u'x': 484.427490234375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42112)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415165914226', u'text': u'11111', u'y': 270.31640625, u'x': 204.17724609375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415165921345', u'text': u'22222', u'y': 538.44140625, u'x': 748.65966796875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415165928017', u'text': u'33333', u'y': 852.5625, u'x': 154.1455078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16737895, u'timestamp': u'20170415165938600', u'text': u'44444', u'y': 786.52734375, u'x': 757.6904296875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -6750055, u'timestamp': u'20170415165947568', u'text': u'55555', u'y': 934.59375, u'x': 484.427490234375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42159)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42178)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42214)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42227)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42233)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42237)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42242)
+----------------------------------------
+A client is disconnected.
+A client is disconnected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42249)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42250)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42254)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42266)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415171600038', u'text': u'12345', u'y': 155.23828125, u'x': 171.15234375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'timestamp': u'20170415171609808', u'text': u'22222', u'y': 320.296875, u'x': 678.5888671875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415171618915', u'text': u'33333', u'y': 505.39453125, u'x': 249.232177734375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -13312, u'timestamp': u'20170415171626366', u'text': u'44444', u'y': 728.51953125, u'x': 600.5419921875, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415171632544', u'text': u'55555', u'y': 873.59765625, u'x': 142.115478515625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42309)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42315)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42323)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415172049224', u'text': u'1111', u'y': 266.2734375, u'x': 286.2451171875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415172055605', u'text': u'2222', u'y': 526.4296875, u'x': 509.443359375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'timestamp': u'20170415172102477', u'text': u'3333', u'y': 860.58984375, u'x': 96.07177734375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42343)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -13312, u'timestamp': u'20170415172156292', u'text': u'11111', u'y': 221.2734375, u'x': 204.17724609375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415172202362', u'text': u'22222', u'y': 724.53515625, u'x': 546.4892578125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415172209413', u'text': u'33333', u'y': 501.41015625, u'x': 105.1025390625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16776961, u'timestamp': u'20170415172216491', u'text': u'44444', u'y': 353.34375, u'x': 719.65576171875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -6750055, u'timestamp': u'20170415172222258', u'text': u'555', u'y': 518.40234375, u'x': 414.356689453125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415172314016', u'text': u'1', u'y': 435.375, u'x': 451.402587890625, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42383)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42402)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415172759013', u'text': u'111111', u'y': 117.30551147460938, u'x': 179.161376953125, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415172806564', u'text': u'22222', u'y': 415.3359375, u'x': 695.628662109375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -13312, u'timestamp': u'20170415172814764', u'text': u'33333', u'y': 745.51171875, u'x': 315.281982421875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -65536, u'timestamp': u'20170415172825363', u'text': u'44444', u'y': 827.54296875, u'x': 835.7373046875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -65536, u'timestamp': u'20170415172834275', u'text': u'55555', u'y': 510.43359375, u'x': 356.31591796875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -39424, u'timestamp': u'20170415172855070', u'text': u'11111', u'y': 204.28125, u'x': 389.3408203125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -16738048, u'timestamp': u'20170415172905218', u'text': u'22222', u'y': 633.48046875, u'x': 579.51416015625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -6750055, u'timestamp': u'20170415172912281', u'text': u'33333', u'y': 720.4921875, u'x': 274.248046875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42450)
+----------------------------------------
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42461)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42466)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42481)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42488)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42497)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42502)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42507)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42518)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42523)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42528)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42533)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42571)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42610)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42625)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42652)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42659)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42664)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42669)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42692)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42701)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42706)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42717)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42728)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42745)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42810)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415201000127', u'text': u'hello', u'y': 213.24609375, u'x': 173.162841796875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415201018364', u'text': u'333', u'y': 882.5625, u'x': 749.681396484375, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415201023225', u'text': u'23232', u'y': 235.27734375, u'x': 399.3603515625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415201410081', u'text': u'555', u'y': 674.49609375, u'x': 754.658203125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42887)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42921)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42927)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42931)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42935)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42941)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415202033793', u'text': u'343', u'y': 218.28515625, u'x': 146.136474609375, u'type': u'TXT'}
+A client is disconnected.
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42952)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415202128601', u'text': u'565', u'y': 1019.671875, u'x': 918.826904296875, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42964)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42970)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42976)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42980)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42985)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42990)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 42994)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+A client is disconnected.
+A client is disconnected.
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415203115063', u'text': u'hello', u'y': 882.5625, u'x': 780.69580078125, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43078)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43077)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415203132347', u'text': u'qw', u'y': 176.6619873046875, u'x': 182.73231506347656, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415203149085', u'text': u'uuu', u'y': 293.57061767578125, u'x': 521.2621459960938, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43103)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415203246744', u'text': u'111', u'y': 551.3692626953125, u'x': 366.47711181640625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43118)
+----------------------------------------
+A new client is connected.
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415203524758', u'text': u'123', u'y': 517.3958129882812, u'x': 175.74203491210938, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43171)
+----------------------------------------
+event_draw is triggered by user_id 1199887766
+Json content: {u'user_id': u'1199887766', u'data_type': u'add_drawing', u'color': -10092544, u'timestamp': u'20170415203746781', u'text': u'324', u'y': 119.70648193359375, u'x': 531.248291015625, u'type': u'TXT'}
+event_draw is broadcasted to all online client!
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43335)
+----------------------------------------
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43507)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43532)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43657)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43676)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43692)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43711)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43749)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43774)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43797)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43822)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43839)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43857)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43875)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43934)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 43953)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 44364)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 44380)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 44542)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 44554)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 44744)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 45230)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 46175)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 47489)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 48010)
+----------------------------------------
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 48521)
+----------------------------------------
+A new client is connected.
+A new client is connected.
+A new client is connected.
+A client is disconnected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 48765)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 49632)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 49751)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50081)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 50268)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 51538)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 51643)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 51771)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52376)
+----------------------------------------
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52514)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52673)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53303)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53311)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53317)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53326)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53331)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53487)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53498)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53853)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53890)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53961)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54007)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54050)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54109)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54113)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54119)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54124)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54129)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54134)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54139)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54144)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54149)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54154)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54159)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54164)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54169)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54174)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54182)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54187)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54190)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54193)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54299)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54312)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54346)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54365)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54370)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54377)
+----------------------------------------
+A new client is connected.
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54511)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54522)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54541)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54552)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54707)
+----------------------------------------
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54822)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54857)
+----------------------------------------
+A client is disconnected.
+A new client is connected.
+A client is disconnected.
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54866)
+----------------------------------------
+A new client is connected.

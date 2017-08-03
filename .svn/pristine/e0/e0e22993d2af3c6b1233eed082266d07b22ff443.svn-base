@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_2ca49d1e5ee037b3c46a5478e5c9b13c9126ec72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_4a57d41285c21ff26554143fe76b56565dc52e9e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_589490293fbca2a4f28c6e26e6396e312aef7e0b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd11b3899f275668a9355f19cea2c2320f5f9d14">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.0_7372e475c8e797bc1f0b7506c3c48f033a34d36c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9f41e6463de88c3f979d796382fc24fb7e9cd41">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.0_78154a05afe4420f0bf851df947dab546f52e084/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74d1712880eb2b4ab37ddf3c6a3232c883756726">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.0_5007622d14dc86dd159aec66de8955c515b5fc4c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.0_bdb06bfd770cc1d9fbcc5b9d112992d85906f042/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.0_bee4dbfb4fe1915385004fcf70f004488ed4f317/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_99a569d64d821c8b8f2f39f6bfdfee3ddd6310ce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.0_c0b5b873b844573abe151a1ea7304ae85021a026/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_8c979edf8191af53f3fff77afcab59df005537de/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_07cdc655f6dbaad8079d995c7686ef6600a9d09b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_a7bdb83aba4126c9bd0f6293e69117d9ca5b2637/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_2760a6bb8dd92cd0184d0512f32c64513ba13351/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_a002c8707a7ac7924dcf89f9512f7d8f8dfa0750/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.0_c636c6b081c70d473cb9fca3073920b8ba9fb45e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_e9c869d05879b12c2e467f1af90860340c1afdc4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d39f676be8400123523882d189a1d84040d34339">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.0_9fce9fd0a6c25bf6afe97923f7cba62cb5640075/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_19ac6eae2e6fe6c48f5c56d92be526db5dea960a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_e091703e54563271d7cde96bc9efa05a7b83fd46/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a93aa431de60b775c91158433f3c687f1d32cb9c">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.0_007b05d61511f7f46cb3ece9ed1cecf736d38aa8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="904577905f679cca93da9ae35b9d3713ad35f782">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2ea870ca61828242f015313957efbada98e19235/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="412fb70e12d2a5b14063c651b90be51c218f552f">
+        <dex dex="/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46bf0fb316307ba7011b571155c9f07be8095962/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,8 @@
+[program:iems5722_group5]
+command = gunicorn group5:app -b localhost:8000
+directory = /home/storeboss/iems5722
+user = storeboss
+autostart = true
+autorestart = true
+stdout_logfile = /home/storeboss/iems5722/group5.log
+redirect_stderr = true

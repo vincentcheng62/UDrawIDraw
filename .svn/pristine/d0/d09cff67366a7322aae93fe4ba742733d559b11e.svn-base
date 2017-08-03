@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/cuhk.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/cuhk.png"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/voice_bubble_right.9.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/voice_bubble_right.9.png"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/voice_bubble_left.9.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/voice_bubble_left.9.png"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/attach.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/attach.png"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/refresh.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/refresh.png"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/arrow_left.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/arrow_left.png"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/drawable-xxhdpi/send.png",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/drawable-xxhdpi/send.png"
+    }
+]

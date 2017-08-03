@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:columnCount="3">
+
+        <ImageButton
+            android:id="@+id/emoji_grin"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_margin="0dp"
+            android:padding="1dp"
+            android:src="@drawable/emoji_grin" />
+
+        <ImageButton
+            android:id="@+id/emoji_lol"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_margin="0dp"
+            android:padding="1dp"
+            android:src="@drawable/emoji_lol" />
+
+        <ImageButton
+            android:id="@+id/emoji_smile"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_margin="0dp"
+            android:padding="1dp"
+            android:src="@drawable/emoji_smile" />
+        <ImageButton
+            android:id="@+id/emoji_cry"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_margin="0dp"
+            android:padding="1dp"
+            android:src="@drawable/emoji_cry" />
+        <ImageButton
+            android:id="@+id/emoji_think"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_margin="0dp"
+            android:padding="1dp"
+            android:src="@drawable/emoji_think" />
+
+    </GridLayout>
+
+
+</LinearLayout>

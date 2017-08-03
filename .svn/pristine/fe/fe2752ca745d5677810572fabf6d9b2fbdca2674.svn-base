@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/voice_bubble_left.9.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/voice_bubble_left.9.png"
+    },
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/send.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/send.png"
+    },
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/refresh.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/refresh.png"
+    },
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/arrow_left.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/arrow_left.png"
+    },
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/voice_bubble_right.9.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/voice_bubble_right.9.png"
+    },
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/attach.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/attach.png"
+    },
+    {
+        "merged": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/build/intermediates/res/merged/debug/drawable-mdpi/cuhk.png",
+        "source": "/Users/AlexLiu/AndroidStudioProjects/Group5/app/src/main/res/drawable-mdpi/cuhk.png"
+    }
+]

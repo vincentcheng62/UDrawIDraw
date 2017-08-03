@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/menu/menu_message.xml",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/menu/menu_message.xml"
+    },
+    {
+        "merged": "/Users/hmcheng/udrawidraw/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/hmcheng/udrawidraw/app/src/main/res/menu/menu_main.xml"
+    }
+]

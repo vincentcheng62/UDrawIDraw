@@ -1,0 +1,38 @@
+server {
+ listen 80;
+ listen [::]:80;
+ root /home/storeboss/iems5722;
+ index index.php index.html index.htm;
+ server_name 104.197.156.144;
+
+ location /api/asgn3/ {
+ proxy_pass http://localhost:8000;
+ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ proxy_set_header X-Real-IP $remote_addr;
+ proxy_set_header Host $http_host;
+ proxy_http_version 1.1;
+ proxy_redirect off;
+ proxy_buffering off;
+ }
+
+ location /api/asgn4/ {
+ proxy_pass http://localhost:8000;
+ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ proxy_set_header X-Real-IP $remote_addr;
+ proxy_set_header Host $http_host;
+ proxy_http_version 1.1;
+ proxy_redirect off;
+ proxy_buffering off;
+ }
+
+ 
+ location /api/group5/ {
+ proxy_pass http://localhost:8000;
+ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ proxy_set_header X-Real-IP $remote_addr;
+ proxy_set_header Host $http_host;
+ proxy_http_version 1.1;
+ proxy_redirect off;
+ proxy_buffering off;
+ }
+}
